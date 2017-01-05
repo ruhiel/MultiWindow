@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiWindow.View"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         Title="SubView" Height="300" Width="300">
     <Window.Resources>
@@ -12,4 +13,7 @@
     <Window.Visibility>
         <Binding Path="VisibleProperty" Converter="{StaticResource BoolToVisibility}" Mode="TwoWay"/>
     </Window.Visibility>
+    <DockPanel>
+        <Button Content="表示切り替え" FontSize="20" Width="200" Height="100" Command="{Binding ChangeCommand}" />
+    </DockPanel>
 </Window>
